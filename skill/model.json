@@ -1,0 +1,107 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "casa grotta",
+            "intents": [
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": []
+                },
+                {
+                    "name": "TurnOnAlarmIntent",
+                    "slots": [
+                        {
+                            "name": "time",
+                            "type": "AMAZON.DURATION"
+                        }
+                    ],
+                    "samples": [
+                        "accendere l'allarme",
+                        "accendere allarme",
+                        "cambia stato allarme su acceso",
+                        "imposta allarme su acceso",
+                        "cambia stato in acceso",
+                        "accendi l'allarme",
+                        "accendi allarme",
+                        "cambia stato allarme su acceso tra {time}",
+                        "imposta allarme su acceso tra {time}",
+                        "cambia stato in acceso tra {time}",
+                        "accendi l'allarme tra {time}",
+                        "accendi allarme tra {time}",
+                        "cambia stato allarme su acceso fra {time}",
+                        "imposta allarme su acceso fra {time}",
+                        "cambia stato in acceso fra {time}",
+                        "accendi l'allarme fra {time}",
+                        "accendi allarme fra {time}",
+                        "ppiccia l'allarme tra {time}",
+                        "ppiccia allarme tra {time}",
+                        "ppiccia allarme fra {time}"
+                    ]
+                },
+                {
+                    "name": "AMAZON.NavigateHomeIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.YesIntent",
+                    "samples": [
+                        "eh si",
+                        "sine",
+                        "scine",
+                        "si esatto",
+                        "esatto",
+                        "vai",
+                        "confermo",
+                        "ovvio",
+                        "certo che si",
+                        "vai vai",
+                        "yes",
+                        "certo",
+                        "si si",
+                        "sci",
+                        "si grazie",
+                        "si"
+                    ]
+                },
+                {
+                    "name": "TurnOffAlarmIntent",
+                    "slots": [],
+                    "samples": [
+                        "stutà l'allarme",
+                        "stutà allarme",
+                        "spegnere allarme",
+                        "spegnere l'allarme",
+                        "cambia stato allarme su spento",
+                        "imposta allarme su spento",
+                        "cambia stato in spento",
+                        "spegni l'allarme",
+                        "spegni allarme",
+                        "stuta allarme",
+                        "stuta l'allarme"
+                    ]
+                },
+                {
+                    "name": "AMAZON.NoIntent",
+                    "samples": [
+                        "uffa no",
+                        "no grazie",
+                        "ma anche no",
+                        "assolutamente no",
+                        "noooo",
+                        "none",
+                        "no no"
+                    ]
+                }
+            ],
+            "types": []
+        }
+    }
+}
