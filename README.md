@@ -4,7 +4,7 @@ Currently, it only has got a very basic way to manage the alarm status: using a 
 My goal was to give the users at home a simple way to turn the alarm on/off: so why not using voice instead of an app?
 The current Alarm System at home doesn't have an integrated Alexa Skill to turn on/off the alarm. 
 I created it, and integrated it with a Node middleware that specifically interacts with the Alarm endpoint.
-
+Also added a Telegram bot in order to handle the alarm directly from it.
 
 ### About the Alexa Skill
 A dedicated Alexa skill was created using Python language. It helps the user to schedule the alarm arming at home, so it can change the Alarm status at a preferred time. This way the user has got some time to leave the house with no rush. 
@@ -13,6 +13,9 @@ This skill will never be published to the Skill Store and was created and design
 
 Concept: Using Amazon Echo Dot you can ask something like: 'Alexa, ask Alarm Grotta to turn on the alarm in 10 minutes' or 'Alexa, ask Alarm Grotta to turn off the alarm'.
 
+### About the Telegram Bot
+Simple Telegram Bot using python-telegram-bot library. Also a systemd service file is being attached in order to run it in production environments.
+
 ### About the middleware
 the Node script is just a simple bridge between the Alexa trigger command and the actual Alarm APIs.
 This API was published in a dedicated server production environment using PM2 module.
@@ -20,6 +23,10 @@ When the AWS Lambda function is being triggered by the user's voice, it calls my
 After the specified delay, my API calls the actual Alarm API, changing the status to the preferred user status.
 
 ![Design Diagram](/other/diagram.jpg)
+
+### What's not implemented
+- Security. The middleware should have a strong authentication mechanism.
+- HTTP responses. Due to Lambda limitations it wasn't possible to give the user (by voice or by a telegram message) a proper response about the transaction being processed. So, if it fails for whatever reason, the user keep thinging the alarm status have been changed when it's actually not.
 
 ### Used Languages
 - Nodejs

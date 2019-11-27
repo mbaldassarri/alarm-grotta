@@ -1,0 +1,11 @@
+[Unit]
+Description=Running awesome Alarm Grotta Bot at startup! 
+After=multi-user.target
+
+[Service]
+Type=idle
+User=yourserveruser
+ExecStart=/usr/bin/python3 your/project/path/script.py > your/project/path/$
+
+[Install]
+WantedBy=multi-user.target
